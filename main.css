@@ -1,0 +1,116 @@
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* ======================================
+   屏样式 + 动态渐变背景（颜色动态变化）
+========================================= */
+.section-1 { background: linear-gradient(135deg, #0066FF, #3399FF); transition: all 0.6s; }
+.section-2 { background: linear-gradient(135deg, #FF6A6A, #FF9999); transition: all 0.6s; }
+.section-3 { background: linear-gradient(135deg, #00CC66, #33FF99); transition: all 0.6s; }
+.section-4 { background: linear-gradient(135deg, #9933FF, #CC66FF); transition: all 0.6s; }
+.section-5 { background: linear-gradient(135deg, #FF6600, #FF9933); transition: all 0.6s; }
+.section-6 { background: #1A1A1A; transition: all 0.6s; }
+
+/* ======================================
+   基础样式
+========================================= */
+.hero-title { font-size: 72px; color: #fff; margin-bottom: 20px; font-weight: bold; }
+.hero-subtitle { font-size: 28px; color: #fff; margin-bottom: 40px; opacity: 0.9; }
+.section-title { font-size: 42px; color: #fff; margin-bottom: 40px; font-weight: bold; }
+.primary-btn {
+  padding: 18px 60px;
+  background: #fff;
+  color: #0066FF;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.primary-btn:hover { transform: scale(1.08); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+/* 服务卡片 */
+.service-box { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.service-card { width: 320px; color: #fff; }
+.service-card img { width: 100px; margin-bottom: 20px; }
+.service-card h3 { font-size: 24px; margin-bottom: 10px; }
+.service-card p { font-size: 16px; opacity: 0.9; }
+
+/* 知识模块 */
+.know-item {
+  background: rgba(255,255,255,0.2);
+  padding: 20px 40px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+}
+
+/* 数据模块 */
+.data-box { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+.data-item { color: #fff; }
+.data-item span { font-size: 48px; font-weight: bold; display: block; }
+.data-item { font-size: 18px; opacity: 0.9; }
+
+/* 表单模块 */
+.apply-form { display: flex; flex-direction: column; gap: 20px; max-width: 500px; margin: 0 auto; }
+.apply-form input {
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+.submit-btn {
+  padding: 18px;
+  background: #fff;
+  color: #FF6600;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* 底部 */
+.footer-box { color: #fff; opacity: 0.8; }
+.footer-box p { margin: 10px 0; font-size: 16px; }
+
+/* ======================================
+   响应式适配（手机字体/布局调试 核心）
+========================================= */
+/* 平板 */
+@media (max-width: 768px) {
+  .hero-title { font-size: 48px; }
+  .hero-subtitle { font-size: 22px; }
+  .section-title { font-size: 32px; }
+  .data-item span { font-size: 36px; }
+}
+/* 手机 */
+@media (max-width: 480px) {
+  .hero-title { font-size: 36px; }
+  .hero-subtitle { font-size: 18px; }
+  .section-title { font-size: 26px; }
+  .know-item { font-size: 16px; padding: 15px 20px; }
+  .primary-btn { padding: 14px 40px; font-size: 16px; }
+}
